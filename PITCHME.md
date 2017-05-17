@@ -1,8 +1,8 @@
----Johnny likes cats.
+Johnny likes cats.
 
 ---
 
----But, cats don't like Johnny.
+> But, cats don't like Johnny.
 
 ---
 
