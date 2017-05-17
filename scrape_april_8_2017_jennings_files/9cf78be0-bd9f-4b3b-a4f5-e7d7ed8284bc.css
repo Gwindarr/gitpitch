@@ -1,0 +1,1042 @@
+/**customizable colors**/
+/*
+ CSS reset to stop outside styles affecting the console window
+ NOTE: Only #upmkt-consoleWindow has been reset for now. If we see 
+       problems with the button too, we might have to reset for that separately as well.
+*/
+
+#upmkt-consoleWindow html,
+#upmkt-consoleWindow body,
+#upmkt-consoleWindow div,
+#upmkt-consoleWindow span,
+#upmkt-consoleWindow applet,
+#upmkt-consoleWindow object,
+#upmkt-consoleWindow iframe,
+#upmkt-consoleWindow h1,
+#upmkt-consoleWindow h2,
+#upmkt-consoleWindow h3,
+#upmkt-consoleWindow h4,
+#upmkt-consoleWindow h5,
+#upmkt-consoleWindow h6,
+#upmkt-consoleWindow p,
+#upmkt-consoleWindow blockquote,
+#upmkt-consoleWindow pre,
+#upmkt-consoleWindow a,
+#upmkt-consoleWindow abbr,
+#upmkt-consoleWindow acronym,
+#upmkt-consoleWindow address,
+#upmkt-consoleWindow big,
+#upmkt-consoleWindow cite,
+#upmkt-consoleWindow code,
+#upmkt-consoleWindow del,
+#upmkt-consoleWindow dfn,
+#upmkt-consoleWindow em,
+#upmkt-consoleWindow img,
+#upmkt-consoleWindow ins,
+#upmkt-consoleWindow kbd,
+#upmkt-consoleWindow q,
+#upmkt-consoleWindow s,
+#upmkt-consoleWindow samp,
+#upmkt-consoleWindow small,
+#upmkt-consoleWindow strike,
+#upmkt-consoleWindow strong,
+#upmkt-consoleWindow sub,
+#upmkt-consoleWindow sup,
+#upmkt-consoleWindow tt,
+#upmkt-consoleWindow var,
+#upmkt-consoleWindow b,
+#upmkt-consoleWindow u,
+#upmkt-consoleWindow i,
+#upmkt-consoleWindow center,
+#upmkt-consoleWindow dl,
+#upmkt-consoleWindow dt,
+#upmkt-consoleWindow dd,
+#upmkt-consoleWindow ol,
+#upmkt-consoleWindow ul,
+#upmkt-consoleWindow li,
+#upmkt-consoleWindow fieldset,
+#upmkt-consoleWindow form,
+#upmkt-consoleWindow label,
+#upmkt-consoleWindow legend,
+#upmkt-consoleWindow table,
+#upmkt-consoleWindow caption,
+#upmkt-consoleWindow tbody,
+#upmkt-consoleWindow tfoot,
+#upmkt-consoleWindow thead,
+#upmkt-consoleWindow tr,
+#upmkt-consoleWindow th,
+#upmkt-consoleWindow td,
+#upmkt-consoleWindow article,
+#upmkt-consoleWindow aside,
+#upmkt-consoleWindow canvas,
+#upmkt-consoleWindow details,
+#upmkt-consoleWindow embed,
+#upmkt-consoleWindow figure,
+#upmkt-consoleWindow figcaption,
+#upmkt-consoleWindow footer,
+#upmkt-consoleWindow header,
+#upmkt-consoleWindow hgroup,
+#upmkt-consoleWindow menu,
+#upmkt-consoleWindow nav,
+#upmkt-consoleWindow output,
+#upmkt-consoleWindow ruby,
+#upmkt-consoleWindow section,
+#upmkt-consoleWindow summary,
+#upmkt-consoleWindow time,
+#upmkt-consoleWindow mark,
+#upmkt-consoleWindow audio,
+#upmkt-consoleWindow video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+#upmkt-consoleWindow article,
+#upmkt-consoleWindow aside,
+#upmkt-consoleWindow details,
+#upmkt-consoleWindow figcaption,
+#upmkt-consoleWindow figure,
+#upmkt-consoleWindow footer,
+#upmkt-consoleWindow header,
+#upmkt-consoleWindow hgroup,
+#upmkt-consoleWindow menu,
+#upmkt-consoleWindow nav,
+#upmkt-consoleWindow section {
+  display: block;
+}
+#upmkt-consoleWindow body {
+  line-height: 1;
+}
+#upmkt-consoleWindow ol,
+#upmkt-consoleWindow ul {
+  list-style: none;
+}
+#upmkt-consoleWindow blockquote,
+#upmkt-consoleWindow q {
+  quotes: none;
+}
+#upmkt-consoleWindow blockquote:before,
+#upmkt-consoleWindow blockquote:after,
+#upmkt-consoleWindow q:before,
+#upmkt-consoleWindow q:after {
+  content: '';
+  content: none;
+}
+#upmkt-consoleWindow table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#upmkt-consoleButton html,
+#upmkt-consoleButton body,
+#upmkt-consoleButton div,
+#upmkt-consoleButton span,
+#upmkt-consoleButton applet,
+#upmkt-consoleButton object,
+#upmkt-consoleButton iframe,
+#upmkt-consoleButton h1,
+#upmkt-consoleButton h2,
+#upmkt-consoleButton h3,
+#upmkt-consoleButton h4,
+#upmkt-consoleButton h5,
+#upmkt-consoleButton h6,
+#upmkt-consoleButton p,
+#upmkt-consoleButton blockquote,
+#upmkt-consoleButton pre,
+#upmkt-consoleButton a,
+#upmkt-consoleButton abbr,
+#upmkt-consoleButton acronym,
+#upmkt-consoleButton address,
+#upmkt-consoleButton big,
+#upmkt-consoleButton cite,
+#upmkt-consoleButton code,
+#upmkt-consoleButton del,
+#upmkt-consoleButton dfn,
+#upmkt-consoleButton em,
+#upmkt-consoleButton img,
+#upmkt-consoleButton ins,
+#upmkt-consoleButton kbd,
+#upmkt-consoleButton q,
+#upmkt-consoleButton s,
+#upmkt-consoleButton samp,
+#upmkt-consoleButton small,
+#upmkt-consoleButton strike,
+#upmkt-consoleButton strong,
+#upmkt-consoleButton sub,
+#upmkt-consoleButton sup,
+#upmkt-consoleButton tt,
+#upmkt-consoleButton var,
+#upmkt-consoleButton b,
+#upmkt-consoleButton u,
+#upmkt-consoleButton i,
+#upmkt-consoleButton center,
+#upmkt-consoleButton dl,
+#upmkt-consoleButton dt,
+#upmkt-consoleButton dd,
+#upmkt-consoleButton ol,
+#upmkt-consoleButton ul,
+#upmkt-consoleButton li,
+#upmkt-consoleButton fieldset,
+#upmkt-consoleButton form,
+#upmkt-consoleButton label,
+#upmkt-consoleButton legend,
+#upmkt-consoleButton table,
+#upmkt-consoleButton caption,
+#upmkt-consoleButton tbody,
+#upmkt-consoleButton tfoot,
+#upmkt-consoleButton thead,
+#upmkt-consoleButton tr,
+#upmkt-consoleButton th,
+#upmkt-consoleButton td,
+#upmkt-consoleButton article,
+#upmkt-consoleButton aside,
+#upmkt-consoleButton canvas,
+#upmkt-consoleButton details,
+#upmkt-consoleButton embed,
+#upmkt-consoleButton figure,
+#upmkt-consoleButton figcaption,
+#upmkt-consoleButton footer,
+#upmkt-consoleButton header,
+#upmkt-consoleButton hgroup,
+#upmkt-consoleButton menu,
+#upmkt-consoleButton nav,
+#upmkt-consoleButton output,
+#upmkt-consoleButton ruby,
+#upmkt-consoleButton section,
+#upmkt-consoleButton summary,
+#upmkt-consoleButton time,
+#upmkt-consoleButton mark,
+#upmkt-consoleButton audio,
+#upmkt-consoleButton video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+#upmkt-consoleButton article,
+#upmkt-consoleButton aside,
+#upmkt-consoleButton details,
+#upmkt-consoleButton figcaption,
+#upmkt-consoleButton figure,
+#upmkt-consoleButton footer,
+#upmkt-consoleButton header,
+#upmkt-consoleButton hgroup,
+#upmkt-consoleButton menu,
+#upmkt-consoleButton nav,
+#upmkt-consoleButton section {
+  display: block;
+}
+#upmkt-consoleButton body {
+  line-height: 1;
+}
+#upmkt-consoleButton ol,
+#upmkt-consoleButton ul {
+  list-style: none;
+}
+#upmkt-consoleButton blockquote,
+#upmkt-consoleButton q {
+  quotes: none;
+}
+#upmkt-consoleButton blockquote:before,
+#upmkt-consoleButton blockquote:after,
+#upmkt-consoleButton q:before,
+#upmkt-consoleButton q:after {
+  content: '';
+  content: none;
+}
+#upmkt-consoleButton table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#upmkt-consoleButton .fa,
+#upmkt-consoleWindow .fa {
+  display: inline-block !important;
+  font: normal normal normal 14px/1 FontAwesome !important;
+  font-size: inherit!important;
+  text-rendering: auto!important;
+  -webkit-font-smoothing: antialiased!important;
+  -moz-osx-font-smoothing: grayscale!important;
+}
+#upmkt-consoleButton .fa-comment:before {
+  content: "\f075";
+}
+#upmkt-consoleButton .fa-exclamation:before {
+  content: "\f12a";
+}
+#upmkt-consoleWindow .fa-edit:before {
+  content: "\f044";
+}
+#upmkt-consoleWindow .fa-comments:before {
+  content: "\f086";
+}
+#upmkt-consoleWindow .fa-user:before {
+  content: "\f007";
+}
+#upmkt-consoleWindow .fa-times:before {
+  content: "\f00d";
+}
+#upmkt-consoleWindow .fa-square-o:before {
+  content: "\f096";
+}
+#upmkt-consoleWindow .fa-check-square-o:before {
+  content: "\f046";
+}
+/* UF CSS STYLES
+ * -------------------------- */
+
+#upmkt-consoleButton-div *,
+#upmkt-consoleWindow-div * {
+  box-sizing: border-box !important;
+  cursor: inherit !important;
+  font-size: 12.5px!important;
+}
+#upmkt-consoleButton {
+  position: fixed!important;
+  bottom: 0.4em!important;
+  right: 0.45em!important;
+  width: 1.3em!important;
+  height: 1.3em!important;
+  border-radius: 1.5em!important;
+  cursor: pointer!important;
+  text-align: center!important;
+  border-style: solid!important;
+  border-width: 0.14em!important;
+  border-color: #45abdb !important;
+  background-color: #8fcde9 !important;
+  color: white!important;
+  font: 700 2.3em arial, verdana!important;
+  padding: 0.3em!important;
+  z-index: 1000000!important;
+}
+#upmkt-consoleButton .chatButton-icon {
+  font-size: 1.6em!important;
+  position: absolute!important;
+  top: 45%!important;
+  left: 50%!important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+}
+#upmkt-consoleWindow {
+  display: none!important;
+  position: fixed!important;
+  bottom: 0!important;
+  right: 0!important;
+  width: 30em!important;
+  height: 100vh!important;
+  /*28.5em!important;*/
+  background-color: transparent!important;
+  margin: 10px 0px 0px 10px!important;
+  font: 500 0.79em arial, verdana!important;
+  z-index: 1000000!important;
+  max-height: 100% !important;
+  max-width: 100% !important;
+}
+#upmkt-consoleWindow.minimized {
+  bottom: -22.6em !important;
+}
+#upmkt-consoleWindow .upmkt-header {
+  background-color: #f1f1f1 !important;
+  height: 10%!important;
+  color: white!important;
+  border-top: 1px solid #45abdb !important;
+  border-left: 1px solid #45abdb !important;
+  border-right: 1px solid #45abdb !important;
+  position: relative!important;
+}
+#upmkt-consoleWindow .upmkt-header-title {
+  display: inline-block !important;
+  font-family: verdana, arial!important;
+  font-size: 1.3em!important;
+  color: #45abdb !important;
+  top: 30%!important;
+  left: 0!important;
+  text-align: center!important;
+  white-space: nowrap!important;
+  overflow: hidden!important;
+  text-overflow: ellipsis!important;
+  width: 78%!important;
+  position: inherit!important;
+}
+#upmkt-consoleWindow .upmkt-chooseconversations-button {
+  cursor: pointer!important;
+  padding-left: 0.7em!important;
+  padding-top: 0.3em!important;
+  color: #45abdb !important;
+  width: auto!important;
+  vertical-align: top!important;
+  text-align: left!important;
+  white-space: nowrap!important;
+}
+#upmkt-consoleWindow .upmkt-chooseconversations-icon {
+  font-size: 2.2em!important;
+}
+#upmkt-consoleWindow .upmkt-header-toggle {
+  float: right!important;
+  display: inline-block !important;
+  cursor: pointer!important;
+  text-align: center!important;
+  font-size: large!important;
+  width: 10%!important;
+  vertical-align: top!important;
+  text-align: right!important;
+  position: absolute!important;
+  left: 90%!important;
+  top: 2%!important;
+}
+#upmkt-consoleWindow .upmkt-header-toggle .dismiss-button {
+  font: 600 1.5em arial, verdana!important;
+  text-decoration: none!important;
+}
+#upmkt-consoleWindow .upmkt-header-dismiss {
+  float: right!important;
+  display: inline-block !important;
+  cursor: pointer!important;
+  width: 2em!important;
+  text-align: center!important;
+}
+#upmkt-consoleWindow .upmkt-header-dismiss a {
+  color: white!important;
+  font: 800 1.2em arial, verdana!important;
+  text-decoration: none!important;
+}
+#upmkt-consoleWindow .upmkt-connection-status {
+  height: 4%!important;
+  color: white!important;
+  border-left: 1px solid #45abdb !important;
+  border-right: 1px solid #45abdb !important;
+  font-size: 1em!important;
+  text-align: center!important;
+  justify-content: center!important;
+  align-items: center!important;
+  padding-top: 0.65em!important;
+}
+#upmkt-consoleWindow .upmkt-connection-status .reconnect-button {
+  cursor: pointer!important;
+  text-decoration: underline!important;
+  padding-left: 0.5em!important;
+  display: inline-block !important;
+}
+#upmkt-consoleWindow .upmkt-new-conversation-button-div {
+  display: none!important;
+  margin-top: 1em!important;
+  padding-left: 0.5em!important;
+  padding-right: 0.5em!important;
+  padding-top: 0.3em!important;
+  padding-bottom: 0.3em!important;
+  border-radius: 0.2em!important;
+  border: blue!important;
+  display: inline-block !important;
+  align-self: center!important;
+  text-align: center!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  font-size: 1.3em!important;
+  position: absolute!important;
+  margin: auto!important;
+  top: 25%!important;
+  right: 0!important;
+  bottom: 0!important;
+  left: 0!important;
+  width: 100%!important;
+}
+#upmkt-consoleWindow .upmkt-new-conversation-button {
+  background-color: #45abdb !important;
+  color: white!important;
+  border-color: #45abdb !important;
+  box-shadow: none!important;
+  cursor: pointer;
+  padding: 0.2em 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+  line-height: 1.5em!important;
+  font-size: 1em!important;
+  border-radius: 0.3em!important;
+  border-style: none;
+  margin: 0 auto!important;
+  cursor: pointer!important;
+  font-family: arial, verdana!important;
+  font-weight: 500!important;
+  text-transform: none!important;
+  letter-spacing: normal!important;
+}
+#upmkt-consoleWindow button.upmkt-new-conversation-button:hover {
+  background-color: #45abdb !important;
+  opacity: 0.8;
+}
+#upmkt-consoleWindow button.upmkt-new-conversation-button:active {
+  outline: none!important;
+  border: none!important;
+}
+#upmkt-consoleWindow button.upmkt-new-conversation-button:focus {
+  outline: 0!important;
+}
+#upmkt-consoleWindow .upmkt-newconversationscounter {
+  font-weight: normal!important;
+  font-size: 0.5em!important;
+  padding-left: 0.2em!important;
+  font-family: verdana, arial!important;
+}
+#upmkt-consoleWindow .upmkt-body {
+  border-left: 1px solid #45abdb !important;
+  border-right: 1px solid #45abdb !important;
+  height: 65%!important;
+  overflow-y: auto!important;
+  -webkit-overflow-scrolling: touch!important;
+}
+#upmkt-consoleWindow.show-connection-status .upmkt-body {
+  height: 61%!important;
+}
+#upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel {
+  display: none!important;
+}
+#upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel .upmkt-conversations {
+  padding: 0em!important;
+}
+#upmkt-consoleWindow .upmkt-body.full-body {
+  height: 90%!important;
+}
+#upmkt-consoleWindow.show-connection-status .upmkt-body.full-body {
+  height: 86%!important;
+}
+#upmkt-consoleWindow .upmkt-conversationspanel .upmkt-conversations li {
+  list-style: none!important;
+  margin: 0.1em!important;
+  padding: 0.3em!important;
+  height: 7em!important;
+  font-size: 1em!important;
+  font-family: verdana, arial!important;
+  border-bottom: 1px solid #f1f1f1 !important;
+}
+#upmkt-consoleWindow .upmkt-conversationspanel .upmkt-conversations li:hover {
+  background-color: #f1f1f1 !important;
+  cursor: pointer!important;
+}
+#upmkt-consoleWindow .upmkt-conversationspanel .upmkt-conversations li.convWithNewMessages {
+  background-color: #ecf7fb !important;
+}
+#upmkt-consoleWindow .upmkt-conversationspanel .upmkt-conversations li.convWithNewMessages:hover {
+  background-color: #c7e6f4 !important;
+  cursor: pointer!important;
+}
+#upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-greetingMessage,
+#upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel .upmkt-greetingMessage {
+  clear: both!important;
+  font-family: verdana, arial!important;
+  text-align: center!important;
+  color: gray!important;
+  padding: 10px 20px!important;
+}
+#upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-errorMessage {
+  clear: both!important;
+  font-family: verdana, arial!important;
+  text-align: center!important;
+  padding: 10px 20px!important;
+  font-style: italic!important;
+  color: darkgray!important;
+}
+#upmkt-consoleWindow .upmkt-body .upmkt-greetingMessage .upmkt-greetingMessage-hr {
+  margin-bottom: 0!important;
+}
+#upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-messages {
+  padding: 0em!important;
+}
+#upmkt-consoleWindow .upmkt-messagespanel .upmkt-messages li {
+  list-style: none!important;
+  margin: 0em!important;
+  padding: 0em!important;
+}
+#upmkt-consoleWindow .upmkt-footer {
+  position: relative!important;
+  bottom: 0!important;
+  right: 0!important;
+  border-left: 1px solid #45abdb !important;
+  border-right: 1px solid #45abdb !important;
+  height: 25%!important;
+  text-align: center!important;
+  padding: 1em!important;
+  background-color: #f1f1f1 !important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+  width: 100%!important;
+  margin: 0em!important;
+  height: 7em!important;
+  margin-bottom: 0!important;
+  resize: none!important;
+  max-width: none!important;
+  font-size: 1.1em!important;
+  padding: 0.5em!important;
+  border-color: lightgray!important;
+  outline: none!important;
+  border: 1px solid lightgray!important;
+  border-radius: 0.3em!important;
+  background: white!important;
+  text-align: left!important;
+  white-space: pre!important;
+}
+/* Mobile portrait Based on iPhone 5 */
+
+/*@media screen and (max-width: 480px) {
+        #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+            height: 4em!important;
+        }
+    }*/
+
+/* Mobile portrait based on iPhone 5*/
+
+/*@media screen and (max-device-height: 480px) and (orientation: landscape) {
+        #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+            height: 2.5em!important;
+        }
+    }*/
+
+/* Iphones 5/6 Portrait */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 479px) and (orientation: portrait) {
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+    height: 4em!important;
+  }
+  #upmkt-consoleWindow .upmkt-connection-status {
+    font-size: smaller!important;
+    height: 6%!important;
+  }
+  #upmkt-consoleWindow .upmkt-header-title {
+    font-size: small!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button-div {
+    margin-top: -0.5em !important;
+  }
+  #upmkt-consoleWindow .upmkt-body {
+    height: 60%!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer {
+    height: 30%!important;
+  }
+  #upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-greetingMessage,
+  #upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel .upmkt-greetingMessage {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-header,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-content,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-time,
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-conversationspanel .upmkt-conversations li {
+    min-height: 6em!important;
+  }
+  #upmkt-consoleWindow .conversation-snippet {
+    min-height: 4.5em!important;
+  }
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-content {
+    width: 11em!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+    padding: 0.15em 1em !important;
+  }
+}
+/* Iphone 5/6 Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 479px) and (orientation: landscape) {
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+    height: 2.5em!important;
+  }
+  #upmkt-consoleWindow .upmkt-connection-status {
+    font-size: smaller!important;
+    height: 6%!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button-div {
+    margin-top: -0.5em !important;
+  }
+  #upmkt-consoleWindow .upmkt-header {
+    height: 13%!important;
+  }
+  #upmkt-consoleWindow .upmkt-body {
+    height: 52%!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer {
+    height: 35%!important;
+  }
+  #upmkt-consoleWindow .upmkt-header-title {
+    font-size: small!important;
+  }
+  #upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-greetingMessage,
+  #upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel .upmkt-greetingMessage {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-header,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-content,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-time,
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+    padding: 0.15em 1em !important;
+  }
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 767px) and (orientation: portrait) {
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+    height: 7.5em!important;
+  }
+  #upmkt-consoleWindow .upmkt-connection-status {
+    font-size: smaller!important;
+    height: 6%!important;
+  }
+  #upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-greetingMessage,
+  #upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel .upmkt-greetingMessage {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-header,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-content,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-time {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-conversationspanel .upmkt-conversations li {
+    min-height: 6em!important;
+  }
+  #upmkt-consoleWindow .conversation-snippet {
+    min-height: 4.5em!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+    padding: 0.15em 1em !important;
+  }
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 767px) and (orientation: landscape) {
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+    height: 2.5em!important;
+  }
+  #upmkt-consoleWindow .upmkt-connection-status {
+    font-size: smaller!important;
+    height: 6%!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button-div {
+    margin-top: -0.5em !important;
+  }
+  #upmkt-consoleWindow .upmkt-header {
+    height: 13%!important;
+  }
+  #upmkt-consoleWindow .upmkt-body {
+    height: 52%!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer {
+    height: 35%!important;
+  }
+  #upmkt-consoleWindow .upmkt-header-title {
+    font-size: small!important;
+  }
+  #upmkt-consoleWindow .upmkt-body .upmkt-messagespanel .upmkt-greetingMessage,
+  #upmkt-consoleWindow .upmkt-body .upmkt-conversationspanel .upmkt-greetingMessage {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-new-conversation-button,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-header,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-content,
+  #upmkt-consoleWindow .conversation-snippet .conversation-snippet-time {
+    font-size: smaller!important;
+  }
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+    padding: 0.15em 1em !important;
+  }
+}
+/* Small Devices, Tablets */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px) and (orientation: portrait) {
+  /*#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+          height: 4.7em!important;
+          }*/
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px) and (orientation: landscape) {
+  #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+    height: 4.5em!important;
+  }
+}
+/* Medium Devices, Desktops */
+
+/*@media only screen and (min-device-width : 992px)  and (max-device-width : 1280px){
+        #upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-textbox {
+            height: 1em!important;
+        }
+    }*/
+
+/* Large Devices, Wide Screens */
+
+/*@media only screen and (min-width : 1200px) {
+
+    }*/
+
+#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-send-button-border {
+  margin-top: 0.3em!important;
+  text-align: right!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-message-send-button-border .upmkt-message-hr-line {
+  margin: 0px!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-press-enter-checkbox {
+  font-size: large!important;
+  padding: 5px!important;
+  color: gray!important;
+  cursor: pointer!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-press-enter-text {
+  color: gray!important;
+  cursor: pointer!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-chatcommand .upmkt-send-button {
+  background-color: #45abdb !important;
+  color: white!important;
+  padding: 0.3em 1em!important;
+  border-radius: 0.2em!important;
+  border: 0.1em solid #ecf7fb !important;
+  font-size: 1.2em!important;
+  margin: 0.5em!important;
+  font-family: arial, verdana!important;
+  font-weight: 500!important;
+  text-transform: none!important;
+  letter-spacing: normal!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-send-button:disabled {
+  background-color: dimgray!important;
+  color: lightgray!important;
+  border-color: gray!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-branding {
+  font-size: 0.75em!important;
+  text-align: right!important;
+  width: 100%!important;
+  padding: 0em!important;
+  margin: 0em!important;
+  color: #45abdb !important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-branding a {
+  text-decoration: none!important;
+}
+#upmkt-consoleWindow .upmkt-footer .upmkt-branding {
+  font-size: 0.9em!important;
+  text-align: right!important;
+  width: 100%!important;
+  padding: 0em!important;
+  margin-top: 0!important;
+}
+/*
+     * shared properties
+     */
+
+#upmkt-consoleWindow .upmkt-body {
+  background-color: white!important;
+}
+#upmkt-consoleWindow .upmkt-header-toggle > span.boxclose {
+  float: right!important;
+  margin-top: 0.1em!important;
+  margin-right: 0.25em!important;
+  cursor: pointer!important;
+  color: #45abdb !important;
+  font-size: 1.3em!important;
+  font-weight: lighter!important;
+  display: inline-block !important;
+  line-height: 0px!important;
+  text-decoration: none!important;
+}
+#upmkt-consoleWindow .conversation-row {
+  clear: both!important;
+}
+#upmkt-consoleWindow .bubble {
+  position: relative!important;
+  background: #f4f5e4 !important;
+  border: #f4f5e4 solid 1px !important;
+  -webkit-border-radius: 7px!important;
+  -moz-border-radius: 7px!important;
+  border-radius: 7px!important;
+  display: inline-block !important;
+  font-size: 1em!important;
+  font-family: verdana, arial!important;
+  margin-top: 0.6em!important;
+  margin-bottom: 0.6em!important;
+  margin-right: 0.4em!important;
+  margin-left: 0.4em!important;
+  max-width: 21em!important;
+  min-width: 12em!important;
+  min-height: 3.5em!important;
+  vertical-align: top!important;
+  padding-top: 0.6em!important;
+  padding-right: 0.6em!important;
+  padding-left: 0.6em!important;
+  padding-bottom: 1.5em!important;
+}
+#upmkt-consoleWindow .bubble:after {
+  content: "" !important;
+  position: absolute!important;
+  bottom: 0.5em!important;
+  left: -5px !important;
+  border-style: solid!important;
+  border-width: 6px 5px 6px 0!important;
+  border-color: transparent #f4f5e4 !important;
+  display: block!important;
+  width: 0!important;
+  z-index: 1!important;
+}
+#upmkt-consoleWindow .bubble-customer {
+  position: relative!important;
+  background: #ecf7fb !important;
+  border: #ecf7fb solid 1px !important;
+  -webkit-border-radius: 7px!important;
+  -moz-border-radius: 7px!important;
+  border-radius: 7px!important;
+  display: inline-block !important;
+  padding-top: 0.6em!important;
+  padding-right: 0.6em!important;
+  padding-left: 0.6em!important;
+  padding-bottom: 1.5em!important;
+  font-size: 1em!important;
+  font-family: verdana, arial!important;
+  margin-top: 0.6em!important;
+  margin-bottom: 0.6em!important;
+  margin-left: 0.4em!important;
+  float: right!important;
+  margin-right: 1em!important;
+  max-width: 21em!important;
+  min-width: 12em!important;
+  min-height: 3.5em!important;
+  text-align: right!important;
+  vertical-align: top!important;
+}
+#upmkt-consoleWindow .bubble-customer:after {
+  content: "" !important;
+  position: absolute!important;
+  bottom: 0.5em!important;
+  right: -5px !important;
+  border-style: solid!important;
+  border-width: 6px 0 6px 5px!important;
+  border-color: transparent #ecf7fb !important;
+  display: block!important;
+  width: 0!important;
+  z-index: 1!important;
+}
+#upmkt-consoleWindow .avatar {
+  width: 10%!important;
+  height: 28px!important;
+  display: inline-block !important;
+  margin: 0.5em!important;
+  border-radius: 0.2em!important;
+  text-align: center!important;
+}
+#upmkt-consoleWindow .avatar i {
+  font-size: 26px!important;
+  color: grey!important;
+}
+#upmkt-consoleWindow .avatar.avatar-admin {
+  vertical-align: bottom!important;
+  margin-bottom: 0.6em!important;
+}
+#upmkt-consoleWindow .avatar.avatar-admin-conversation-list {
+  vertical-align: top!important;
+}
+#upmkt-consoleWindow .avatar.avatar-user {
+  background-color: #ecf7fb !important;
+}
+#upmkt-consoleWindow .avatar.admin-profilePic {
+  width: 28px!important;
+  height: 28px!important;
+  margin-top: 0!important;
+}
+#upmkt-consoleWindow .upmkt-chooseconversations-button .upmkt-conversation-window-badge {
+  background: radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -moz-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -ms-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -o-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -webkit-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background-color: red!important;
+  border-radius: 32px!important;
+  /* one half of ( (border * 2) + height + padding ) */
+  color: white!important;
+  padding: 0.1em 0.4em!important;
+  margin-left: -0.2em !important;
+  text-align: center!important;
+  position: relative!important;
+  top: -1em !important;
+  left: -0.2em !important;
+  font-size: 0.95em!important;
+  font-weight: lighter!important;
+}
+#upmkt-consoleButton .upmkt-console-button-badge,
+#upmkt-consoleButton .upmkt-console-button-status {
+  background: radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -moz-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -ms-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -o-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background: -webkit-radial-gradient(5px -9px, circle, white 8%, red 26px) !important;
+  background-color: red!important;
+  border-radius: 32px!important;
+  /* one half of ( (border * 2) + height + padding ) */
+  color: white!important;
+  padding: 0.12em 0.4em!important;
+  text-align: center!important;
+  left: 1.3em!important;
+  top: -1.7em !important;
+  position: relative!important;
+  font-size: 0.95em!important;
+  font-weight: lighter!important;
+}
+#upmkt-consoleWindow .conversation-snippet {
+  display: inline-block !important;
+  vertical-align: top!important;
+  position: relative!important;
+  min-height: 6.5em!important;
+  width: 85%!important;
+}
+#upmkt-consoleWindow .conversation-snippet .conversation-snippet-header {
+  padding: 0.5em 0.3em 0.3em 0.3em!important;
+  font-size: 1.1em!important;
+  color: dimgray!important;
+  font-family: verdana, arial!important;
+}
+#upmkt-consoleWindow .conversation-snippet .conversation-snippet-header.new-conversation {
+  font-weight: bold!important;
+}
+#upmkt-consoleWindow .conversation-snippet .conversation-snippet-content {
+  font-family: verdana, arial!important;
+  font-size: 1.1em!important;
+  color: dimgray!important;
+  padding-left: 0.3em!important;
+  padding-right: 0.3em!important;
+  width: 22em!important;
+  letter-spacing: 0.01em!important;
+  line-height: 130%!important;
+  color: #969595 !important;
+}
+#upmkt-consoleWindow .conversation-snippet .conversation-snippet-time {
+  color: darkgray!important;
+  font-size: 0.9em!important;
+  position: absolute!important;
+  bottom: 0.5em!important;
+  right: 0.1em!important;
+}
+#upmkt-consoleWindow .conversation-row .bubble-time {
+  position: absolute!important;
+  right: 0!important;
+  font-size: 0.7em!important;
+  color: darkgray!important;
+  margin-right: 8px!important;
+  margin-top: 3px!important;
+}
+#upmkt-consoleWindow .conversation-row .bubble-from-name {
+  color: #45abdb !important;
+}
+

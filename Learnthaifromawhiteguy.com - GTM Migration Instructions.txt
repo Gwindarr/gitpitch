@@ -1,0 +1,203 @@
+
+Learnthaifromwhiteguy.com CODE CHANGES - GTM MIGRATION 
+	
+==============================================================================================
+REMOVE - GA CODE
+==============================================================================================
+
+< Item # 1 >
+Remove the following code for all site pages, some pages will have this code and other pages will have custom code below
+page example: learnthaifromawhiteguy.com
+
+<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-16669378-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+==============================================================================================
+ADD - GTM CODE and CUSTOM DIMENSIONS
+==============================================================================================
+
+< Item # 2 >
+Add following code to all pages right after <body>
+//if dimensions data is available then we push it in dataLayer
+<script>
+dataLayer.push({
+	'priceTest':'price-97',
+	'Site-wideHeader':'fastest way',	
+	'OptimizelyHomePage': 'Optimizely'
+});
+
+</script>
+
+<!-- Google Tag Manager -->
+<script>var dataLayer=window.dataLayer||[];</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K85VQH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K85VQH');</script>
+<!-- End Google Tag Manager -->
+
+==============================================================================================
+REMOVE - MODIFIED GA CODE
+==============================================================================================
+
+< Item # 3 >
+Remove the following code from all pages of site where default ga code is not present
+page example: learnthaifromawhiteguy.com/ask-brett/
+
+<!-- Google Analytics -->
+<script>
+	if (!window['ga']) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-16669378-1', 'auto');
+
+		if (window['ga_cmds']) {
+			for(var i=0; i<ga_cmds.length; i++) {
+				var opt = ga_cmds[i];
+				if (opt['d'])
+					ga(opt['a'], opt['b'], opt['c'], opt['d']);
+				else
+					ga(opt['a'], opt['b'], opt['c']);
+			}
+		}
+				ga('send', 'pageview');
+			}
+</script>
+<!-- End Google Analytics -->
+
+==============================================================================================
+REMOVE - Dimension 11
+==============================================================================================
+
+< Item # 4 >
+Remove the following code from all pages that have custom dimension code
+Page Example: http://learnthaifromawhiteguy.com/free-lesson-quiz/
+		http://learnthaifromawhiteguy.com/confirm-signup/
+
+<script>
+if (window['ga']) {
+  ga('send', 'event', 'free-lesson-quiz-ab-version', 'lower-price');
+  ga('set', 'dimension11', 'price-97');
+}
+else {
+  ga_cmds = window['ga_cmds'] || [];
+  ga_cmds.push({ a: 'send', b: 'event', c: 'free-lesson-quiz-ab-version', d: 'price-97' });
+  ga_cmds.push({ a: 'set', b: 'dimension11', c: 'price-97' });
+}
+</script>
+
+==============================================================================================
+ADD - Dimension 11 
+==============================================================================================
+
+< Item # 5 > - Dimension 11
+Add following code to pages with which previously had relavent dimensions code look <item#4> for reference
+(add all events code after default gtm tracking code)
+Page Example : http://learnthaifromawhiteguy.com/free-lesson-quiz/
+		http://learnthaifromawhiteguy.com/confirm-signup/
+<script>
+dataLayer.push({
+	'event': 'gaEvent Free Quiz Lesson',
+	'priceTest':'price-97',
+	'eventCat': 'free-lesson-quiz-ab-version',
+	'eventAct': 'lower-price'
+});
+</script>
+
+==============================================================================================
+REMOVE - Modified GA Code Including Dimensions
+==============================================================================================
+
+< Item # 6 >
+Remove cross domain tracking code from all pages
+Page Example: http://learnthaifromawhiteguy.com/free-thai-lesson
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new 
+Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-16669378-1', 'auto', {'allowLinker': true});
+	ga('require', 'ecommerce');
+	ga('require', 'displayfeatures');
+	ga('require', 'linkid', 'linkid.js');
+        ga('require', 'linker');
+	ga('linker:autoLink', ['dpdcart.com']);
+	
+	ga('set', 'dimension7', 'fastest way');
+			 
+		 
+	
+	
+	ga('set', 'dimension4', clientId);
+	
+  ga('send', 'pageview');
+</script>
+
+==============================================================================================
+REMOVE - Ecommerce Tracking
+==============================================================================================
+< Item # 7 > 
+Remove Ecommerce Tracking from /confirmation page
+Code should look like this 
+
+<script>
+ga('require', 'ecommerce');
+ga('ecommerce:addTransaction', {
+  'id': '1234',                     // Transaction ID. Required.
+  'affiliation': 'Learn Thai from a White Guy',   // Affiliation or store name.
+  'revenue': '58.79',               // Grand Total.
+  'shipping': '',                  // Shipping.
+  'tax': ''                     // Tax.
+});
+ga('ecommerce:addItem', {
+  'id': '1234',                     // Transaction ID. Required.
+  'name': 'Read Thai in 2 Weeks',    // Product name. Required.
+  'sku': 'DD23444',                 // SKU/code.
+  'category': 'Learn Thai',         // Category or variation.
+  'price': '58.79',                 // Unit price.
+  'quantity': '1'                   // Quantity.
+});
+ga('ecommerce:send');
+
+</script>
+
+==============================================================================================
+ADD - Ecommerce Tracking
+============================================================================================== 
+< Item # 8 >
+Add Ecommerce Tracking on /confirmation page before </body> pass relevant dynamic data into fields below
+
+<script>
+dataLayer.push({
+	'event': 'transactionSuccess', 
+	'transactionId': '1234',
+	'transactionAffiliation': 'Learn Thai from a White Guy',
+	'transactionTotal': 58.79,
+	'transactionTax':'',
+	'transactionShipping':'',
+	'transactionProducts': [{
+		'sku': 'DD23444',
+		'name': 'Read Thai in 2 Weeks',
+		'category': 'Learn Thai',
+		'price': 58.79,
+		'quantity': 1
+	}]
+});
+</script>
+============================================================================================== 
